@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="contato.html">Contato</a>
+            <a class= "cabecalho__menu__link" href="habilidades.html">Habilidade</a>
+        </nav>
+    </header>
+
+    <main class="apresentacao">
+        <form class="form" action="https://formsubmit.co/lisieuxnunes8@gmail.com" method="POST">
+            <h2>Entre em contato comigo:</h2>
+            <label for = "nome">Nome:</label>
+            <input type="text" name="name" id = "nome"  placeholder="Preencha seu nome">
+
+            <label for = "email">E-mail: </label>
+            <input type="email" name="email"  id=" email" placeholder="seuemail@.com.br">
+            
+
+            <label for = "textarea">Sua mensagem </label>
+            <textarea name = 'message' id=" textarea" cols="30"  rows="10" placeholder="sua mensagem"> </textarea>
+            <input type="hidden" name="_next" value="file:///C:/Users/user/OneDrive/%C3%81rea%20de%20Trabalho/trabalhos%20alura/Portifolio/index.html">
+            <button type="submit">enviar</button>
+       </form>
+       <img class = "apresentacao__imagem" id = "contato" src="./assets/fotoperfilportifolio.png"/>
+    </main>
+    </main>
+    <footer class="rodape">
+        <p >Desenvolvido por lisieux no programa Alura Include</p>
+    </footer>
+    
+</body>
+</html>
