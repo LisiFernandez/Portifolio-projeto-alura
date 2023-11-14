@@ -26,24 +26,33 @@ body {
     padding: 2% 0 0 15%;
 
 }
+#btn-mobile{
+    display: none;
+}
 
-.cabecalho__menu{
+.cabecalho__menu-desktop #cabecalho__desktop{
     display: flex;
     gap: 80px;
     
 }
+
+
 .cabecalho__menu__link{
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--cor-tercearia);
+    color:  var(--cor-secundaria);
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
 
 
 
-.t-destaque {
-    color: var(--cor-tercearia);
+.t-destaque:hover {
+    color: var(--cor-roover);
+}
+
+.t-destaque{
+    color: var(--cor-secundaria);
 }
 
 .apresentacao{
@@ -64,11 +73,15 @@ body {
 }
 .apresentacao__conteudo__titulo{
     font-size: 2.25rem;
-    font-family: 'Krona One', sans-serif;;   
+    font-family: 'Krona One', sans-serif;
+    color: var(--cor-tercearia); 
+
 }
 .apresentacao__conteudo__texto{
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 16px;
+    color: var(--cor-secundaria) 
 }
 .apresentacao__links__subtitulos{
     font-family: 'krona-one', sans-serif;
@@ -107,45 +120,44 @@ body {
     background-color: var(--cor-roover);
 }
 
-.apresentacao__imagem{
+
+/*.apresentacao__imagem{
     width: 50%;
-}
+}*/
 
 .rodape{
     background-color: var(--cor-tercearia);
-    color: #223240;
-    padding: 24px;
+    color: var(--cor-secundaria);
+    padding: 8px 0 8px 0;
     text-align: center;
     font-family: 'Monteserrat', sans-serif;
     font-size: 1.5rem ;
     font-weight: 400;
 }
-@media(max-width: 900px) {
+@media  (max-width: 1100px) {
     .cabecalho{
         padding: 6%;
     }
-    .cabecalho__menu{
-        justify-content: center;
-    }
-
 
     .apresentacao{
         flex-direction: column-reverse; 
+        align-items: center;
         padding: 5%;
+        
     }
     .apresentacao__conteudo{
         width: auto;
     }
     .apresentacao__imagem{
-        width: 50%;
+        width: auto;
     }
     .apresentacao__links__link{
         width: auto;
         justify-content: center;
         padding: 3% 5%;
     }
-    
 }
+
 
 
 .form{
@@ -185,4 +197,46 @@ body {
 }
 .form input:focus, textarea:focus{
     outline: 2px solid white;
+}
+
+
+@media  (max-width: 800px){
+
+    .cabecalho{
+    padding: 2%;
+
+    }   
+
+    #btn-mobile{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .cabecalho__menu-desktop{
+        padding: 2% 0 0 15%;;
+        position: absolute;
+        right: 10px;
+        background-color:#223240
+
+
+    }
+    .cabecalho__menu__link{
+        display: none;
+        gap: 2px;
+    }
+    #cabecalho__desktop{
+        flex-direction: column;
+    }
+
+
+
+    #nav.active .cabecalho__menu__link{
+        display: flex;
+    
+    }
+
+
+
+
 }
